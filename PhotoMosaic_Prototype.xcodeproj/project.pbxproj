@@ -3,17 +3,51 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDB8D7D5E8EB096B1E684FAE /* Pods_PhotoMosaic_Prototype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45145F86D2BCB71FC9E56254 /* Pods_PhotoMosaic_Prototype.framework */; };
 		C65C9115237B7AED005286CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9114237B7AED005286CA /* AppDelegate.swift */; };
 		C65C9117237B7AED005286CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9116237B7AED005286CA /* ViewController.swift */; };
 		C65C9119237B7AEE005286CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65C9118237B7AEE005286CA /* Assets.xcassets */; };
 		C65C911C237B7AEE005286CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65C911A237B7AEE005286CA /* Main.storyboard */; };
+		C65C9145237B7B2C005286CA /* MetalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9125237B7B2B005286CA /* MetalTypes.swift */; };
+		C65C9146237B7B2C005286CA /* GameTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9126237B7B2B005286CA /* GameTime.swift */; };
+		C65C9147237B7B2C005286CA /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9129237B7B2B005286CA /* KeyCodes.swift */; };
+		C65C9148237B7B2C005286CA /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C912A237B7B2B005286CA /* Mouse.swift */; };
+		C65C9149237B7B2C005286CA /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C912B237B7B2B005286CA /* Keyboard.swift */; };
+		C65C914A237B7B2C005286CA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C912C237B7B2B005286CA /* Extensions.swift */; };
+		C65C914B237B7B2C005286CA /* Maths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C912D237B7B2B005286CA /* Maths.swift */; };
+		C65C914C237B7B2C005286CA /* TextureArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C912E237B7B2B005286CA /* TextureArray.swift */; };
+		C65C914D237B7B2C005286CA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C912F237B7B2B005286CA /* Model.swift */; };
+		C65C914E237B7B2C005286CA /* PhotoLibraryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9130237B7B2B005286CA /* PhotoLibraryApi.swift */; };
+		C65C914F237B7B2C005286CA /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9131237B7B2B005286CA /* Node.swift */; };
+		C65C9150237B7B2C005286CA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9132237B7B2B005286CA /* Settings.swift */; };
+		C65C9151237B7B2C005286CA /* InstancedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9133237B7B2B005286CA /* InstancedObject.swift */; };
+		C65C9152237B7B2C005286CA /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9134237B7B2B005286CA /* Engine.swift */; };
+		C65C9153237B7B2C005286CA /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9135237B7B2B005286CA /* Scene.swift */; };
+		C65C9154237B7B2C005286CA /* Mosaic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9136237B7B2B005286CA /* Mosaic.swift */; };
+		C65C9155237B7B2C005286CA /* SamplerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9138237B7B2B005286CA /* SamplerState.swift */; };
+		C65C9156237B7B2C005286CA /* DepthStencilStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9139237B7B2B005286CA /* DepthStencilStates.swift */; };
+		C65C9157237B7B2C005286CA /* Textures.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C913A237B7B2B005286CA /* Textures.swift */; };
+		C65C9158237B7B2C005286CA /* RenderPipelineStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C913B237B7B2B005286CA /* RenderPipelineStates.swift */; };
+		C65C9159237B7B2C005286CA /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C913C237B7B2B005286CA /* Object.swift */; };
+		C65C915A237B7B2C005286CA /* BasicShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C65C913E237B7B2B005286CA /* BasicShaders.metal */; };
+		C65C915B237B7B2C005286CA /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C913F237B7B2B005286CA /* Quad.swift */; };
+		C65C915C237B7B2C005286CA /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9140237B7B2B005286CA /* Mesh.swift */; };
+		C65C915D237B7B2C005286CA /* xcO5-QcKIR9o.png in Resources */ = {isa = PBXBuildFile; fileRef = C65C9142237B7B2B005286CA /* xcO5-QcKIR9o.png */; };
+		C65C915E237B7B2C005286CA /* MosaicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9143237B7B2C005286CA /* MosaicScene.swift */; };
+		C65C915F237B7B2C005286CA /* Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9144237B7B2C005286CA /* Handler.swift */; };
+		C65C9165237B7BA3005286CA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9163237B7BA3005286CA /* MainView.swift */; };
+		C65C9167237B7BF6005286CA /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9166237B7BF6005286CA /* Camera.swift */; };
+		C65C9169237B7C0D005286CA /* ColorLookup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65C9168237B7C0D005286CA /* ColorLookup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D84231D01C137173C52006D /* Pods-PhotoMosaic_Prototype.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoMosaic_Prototype.debug.xcconfig"; path = "Target Support Files/Pods-PhotoMosaic_Prototype/Pods-PhotoMosaic_Prototype.debug.xcconfig"; sourceTree = "<group>"; };
+		45145F86D2BCB71FC9E56254 /* Pods_PhotoMosaic_Prototype.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoMosaic_Prototype.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		691E5B1F139DD8B20C72AF43 /* Pods-PhotoMosaic_Prototype.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoMosaic_Prototype.release.xcconfig"; path = "Target Support Files/Pods-PhotoMosaic_Prototype/Pods-PhotoMosaic_Prototype.release.xcconfig"; sourceTree = "<group>"; };
 		C65C9111237B7AED005286CA /* PhotoMosaic_Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoMosaic_Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65C9114237B7AED005286CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C65C9116237B7AED005286CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +55,36 @@
 		C65C911B237B7AEE005286CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C65C911D237B7AEE005286CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C65C911E237B7AEE005286CA /* PhotoMosaic_Prototype.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoMosaic_Prototype.entitlements; sourceTree = "<group>"; };
+		C65C9125237B7B2B005286CA /* MetalTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTypes.swift; sourceTree = "<group>"; };
+		C65C9126237B7B2B005286CA /* GameTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTime.swift; sourceTree = "<group>"; };
+		C65C9129237B7B2B005286CA /* KeyCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
+		C65C912A237B7B2B005286CA /* Mouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
+		C65C912B237B7B2B005286CA /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		C65C912C237B7B2B005286CA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C65C912D237B7B2B005286CA /* Maths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maths.swift; sourceTree = "<group>"; };
+		C65C912E237B7B2B005286CA /* TextureArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextureArray.swift; sourceTree = "<group>"; };
+		C65C912F237B7B2B005286CA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C65C9130237B7B2B005286CA /* PhotoLibraryApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryApi.swift; sourceTree = "<group>"; };
+		C65C9131237B7B2B005286CA /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		C65C9132237B7B2B005286CA /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C65C9133237B7B2B005286CA /* InstancedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstancedObject.swift; sourceTree = "<group>"; };
+		C65C9134237B7B2B005286CA /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		C65C9135237B7B2B005286CA /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		C65C9136237B7B2B005286CA /* Mosaic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mosaic.swift; sourceTree = "<group>"; };
+		C65C9138237B7B2B005286CA /* SamplerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamplerState.swift; sourceTree = "<group>"; };
+		C65C9139237B7B2B005286CA /* DepthStencilStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthStencilStates.swift; sourceTree = "<group>"; };
+		C65C913A237B7B2B005286CA /* Textures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Textures.swift; sourceTree = "<group>"; };
+		C65C913B237B7B2B005286CA /* RenderPipelineStates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderPipelineStates.swift; sourceTree = "<group>"; };
+		C65C913C237B7B2B005286CA /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		C65C913E237B7B2B005286CA /* BasicShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = BasicShaders.metal; sourceTree = "<group>"; };
+		C65C913F237B7B2B005286CA /* Quad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		C65C9140237B7B2B005286CA /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mesh.swift; sourceTree = "<group>"; };
+		C65C9142237B7B2B005286CA /* xcO5-QcKIR9o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xcO5-QcKIR9o.png"; sourceTree = "<group>"; };
+		C65C9143237B7B2C005286CA /* MosaicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MosaicScene.swift; sourceTree = "<group>"; };
+		C65C9144237B7B2C005286CA /* Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handler.swift; sourceTree = "<group>"; };
+		C65C9163237B7BA3005286CA /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C65C9166237B7BF6005286CA /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		C65C9168237B7C0D005286CA /* ColorLookup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLookup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +92,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB8D7D5E8EB096B1E684FAE /* Pods_PhotoMosaic_Prototype.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B17A2C07A17798B674E8F76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45145F86D2BCB71FC9E56254 /* Pods_PhotoMosaic_Prototype.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A953268E2CCD46509034E88E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D84231D01C137173C52006D /* Pods-PhotoMosaic_Prototype.debug.xcconfig */,
+				691E5B1F139DD8B20C72AF43 /* Pods-PhotoMosaic_Prototype.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C65C9108237B7AED005286CA = {
 			isa = PBXGroup;
 			children = (
 				C65C9113237B7AED005286CA /* PhotoMosaic_Prototype */,
 				C65C9112237B7AED005286CA /* Products */,
+				A953268E2CCD46509034E88E /* Pods */,
+				6B17A2C07A17798B674E8F76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +137,108 @@
 		C65C9113237B7AED005286CA /* PhotoMosaic_Prototype */ = {
 			isa = PBXGroup;
 			children = (
+				C65C9134237B7B2B005286CA /* Engine.swift */,
+				C65C9168237B7C0D005286CA /* ColorLookup.swift */,
+				C65C9166237B7BF6005286CA /* Camera.swift */,
+				C65C9126237B7B2B005286CA /* GameTime.swift */,
+				C65C9144237B7B2C005286CA /* Handler.swift */,
+				C65C9133237B7B2B005286CA /* InstancedObject.swift */,
+				C65C9140237B7B2B005286CA /* Mesh.swift */,
+				C65C9125237B7B2B005286CA /* MetalTypes.swift */,
+				C65C912F237B7B2B005286CA /* Model.swift */,
+				C65C9136237B7B2B005286CA /* Mosaic.swift */,
+				C65C9143237B7B2C005286CA /* MosaicScene.swift */,
+				C65C9131237B7B2B005286CA /* Node.swift */,
+				C65C913C237B7B2B005286CA /* Object.swift */,
+				C65C9130237B7B2B005286CA /* PhotoLibraryApi.swift */,
+				C65C913F237B7B2B005286CA /* Quad.swift */,
+				C65C9135237B7B2B005286CA /* Scene.swift */,
+				C65C9132237B7B2B005286CA /* Settings.swift */,
+				C65C9160237B7BA3005286CA /* Displays */,
+				C65C913D237B7B2B005286CA /* Graphics */,
+				C65C9137237B7B2B005286CA /* Libraries */,
+				C65C9141237B7B2B005286CA /* Res */,
+				C65C9127237B7B2B005286CA /* Utils */,
+				C65C9124237B7AF9005286CA /* OtherFiles */,
+			);
+			path = PhotoMosaic_Prototype;
+			sourceTree = "<group>";
+		};
+		C65C9124237B7AF9005286CA /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
 				C65C9114237B7AED005286CA /* AppDelegate.swift */,
-				C65C9116237B7AED005286CA /* ViewController.swift */,
 				C65C9118237B7AEE005286CA /* Assets.xcassets */,
 				C65C911A237B7AEE005286CA /* Main.storyboard */,
 				C65C911D237B7AEE005286CA /* Info.plist */,
 				C65C911E237B7AEE005286CA /* PhotoMosaic_Prototype.entitlements */,
 			);
-			path = PhotoMosaic_Prototype;
+			path = OtherFiles;
+			sourceTree = "<group>";
+		};
+		C65C9127237B7B2B005286CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C65C9128237B7B2B005286CA /* Input */,
+				C65C912C237B7B2B005286CA /* Extensions.swift */,
+				C65C912D237B7B2B005286CA /* Maths.swift */,
+				C65C912E237B7B2B005286CA /* TextureArray.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C65C9128237B7B2B005286CA /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				C65C9129237B7B2B005286CA /* KeyCodes.swift */,
+				C65C912A237B7B2B005286CA /* Mouse.swift */,
+				C65C912B237B7B2B005286CA /* Keyboard.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		C65C9137237B7B2B005286CA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C65C9138237B7B2B005286CA /* SamplerState.swift */,
+				C65C9139237B7B2B005286CA /* DepthStencilStates.swift */,
+				C65C913A237B7B2B005286CA /* Textures.swift */,
+				C65C913B237B7B2B005286CA /* RenderPipelineStates.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		C65C913D237B7B2B005286CA /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				C65C913E237B7B2B005286CA /* BasicShaders.metal */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		C65C9141237B7B2B005286CA /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				C65C9142237B7B2B005286CA /* xcO5-QcKIR9o.png */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		C65C9160237B7BA3005286CA /* Displays */ = {
+			isa = PBXGroup;
+			children = (
+				C65C9161237B7BA3005286CA /* views */,
+			);
+			path = Displays;
+			sourceTree = "<group>";
+		};
+		C65C9161237B7BA3005286CA /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C65C9116237B7AED005286CA /* ViewController.swift */,
+				C65C9163237B7BA3005286CA /* MainView.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C65C9121237B7AEE005286CA /* Build configuration list for PBXNativeTarget "PhotoMosaic_Prototype" */;
 			buildPhases = (
+				B00E77F3F8E5C2D578145474 /* [CP] Check Pods Manifest.lock */,
 				C65C910D237B7AED005286CA /* Sources */,
 				C65C910E237B7AED005286CA /* Frameworks */,
 				C65C910F237B7AED005286CA /* Resources */,
+				369CF9154BC4DAF80D4C4A8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65C915D237B7B2C005286CA /* xcO5-QcKIR9o.png in Resources */,
 				C65C9119237B7AEE005286CA /* Assets.xcassets in Resources */,
 				C65C911C237B7AEE005286CA /* Main.storyboard in Resources */,
 			);
@@ -128,13 +309,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		369CF9154BC4DAF80D4C4A8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoMosaic_Prototype/Pods-PhotoMosaic_Prototype-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoMosaic_Prototype/Pods-PhotoMosaic_Prototype-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoMosaic_Prototype/Pods-PhotoMosaic_Prototype-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B00E77F3F8E5C2D578145474 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoMosaic_Prototype-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C65C910D237B7AED005286CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65C9151237B7B2C005286CA /* InstancedObject.swift in Sources */,
+				C65C9145237B7B2C005286CA /* MetalTypes.swift in Sources */,
+				C65C915B237B7B2C005286CA /* Quad.swift in Sources */,
+				C65C9148237B7B2C005286CA /* Mouse.swift in Sources */,
+				C65C915E237B7B2C005286CA /* MosaicScene.swift in Sources */,
+				C65C9169237B7C0D005286CA /* ColorLookup.swift in Sources */,
+				C65C9149237B7B2C005286CA /* Keyboard.swift in Sources */,
+				C65C914A237B7B2C005286CA /* Extensions.swift in Sources */,
+				C65C9150237B7B2C005286CA /* Settings.swift in Sources */,
+				C65C9156237B7B2C005286CA /* DepthStencilStates.swift in Sources */,
+				C65C9158237B7B2C005286CA /* RenderPipelineStates.swift in Sources */,
 				C65C9117237B7AED005286CA /* ViewController.swift in Sources */,
+				C65C914F237B7B2C005286CA /* Node.swift in Sources */,
+				C65C914C237B7B2C005286CA /* TextureArray.swift in Sources */,
+				C65C9165237B7BA3005286CA /* MainView.swift in Sources */,
+				C65C9147237B7B2C005286CA /* KeyCodes.swift in Sources */,
+				C65C915F237B7B2C005286CA /* Handler.swift in Sources */,
+				C65C9153237B7B2C005286CA /* Scene.swift in Sources */,
+				C65C915C237B7B2C005286CA /* Mesh.swift in Sources */,
+				C65C9146237B7B2C005286CA /* GameTime.swift in Sources */,
+				C65C914D237B7B2C005286CA /* Model.swift in Sources */,
+				C65C9159237B7B2C005286CA /* Object.swift in Sources */,
+				C65C9157237B7B2C005286CA /* Textures.swift in Sources */,
+				C65C9154237B7B2C005286CA /* Mosaic.swift in Sources */,
+				C65C914E237B7B2C005286CA /* PhotoLibraryApi.swift in Sources */,
+				C65C9152237B7B2C005286CA /* Engine.swift in Sources */,
+				C65C9155237B7B2C005286CA /* SamplerState.swift in Sources */,
+				C65C9167237B7BF6005286CA /* Camera.swift in Sources */,
+				C65C914B237B7B2C005286CA /* Maths.swift in Sources */,
 				C65C9115237B7AED005286CA /* AppDelegate.swift in Sources */,
+				C65C915A237B7B2C005286CA /* BasicShaders.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,14 +519,15 @@
 		};
 		C65C9122237B7AEE005286CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D84231D01C137173C52006D /* Pods-PhotoMosaic_Prototype.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PhotoMosaic_Prototype/PhotoMosaic_Prototype.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PhotoMosaic_Prototype/OtherFiles/PhotoMosaic_Prototype.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9QQ2JZFGTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = PhotoMosaic_Prototype/Info.plist;
+				INFOPLIST_FILE = PhotoMosaic_Prototype/OtherFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -287,14 +540,15 @@
 		};
 		C65C9123237B7AEE005286CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 691E5B1F139DD8B20C72AF43 /* Pods-PhotoMosaic_Prototype.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PhotoMosaic_Prototype/PhotoMosaic_Prototype.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PhotoMosaic_Prototype/OtherFiles/PhotoMosaic_Prototype.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9QQ2JZFGTQ;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = PhotoMosaic_Prototype/Info.plist;
+				INFOPLIST_FILE = PhotoMosaic_Prototype/OtherFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
