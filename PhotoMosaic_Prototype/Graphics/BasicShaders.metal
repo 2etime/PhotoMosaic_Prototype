@@ -74,16 +74,14 @@ fragment half4 mosaic_fragment_shader(RasterizerData rd [[ stage_in ]],
     
     float4 color = texture.sample(sampler2d, rd.textureCoordinate, rd.slice);
     
-    float4 averageColor = rd.averageColor;
-//    averageColor = pow(averageColor, 2.2);
-    
     if(useAverage) {
-        color *= averageColor;        
+        float4 averageColor = rd.averageColor;
+        color *= pow(averageColor, 1/2.2);;
     }
 //
 //    float lineWidth = 0.01;
 //    float2 texCoord = rd.textureCoordinate;
-//    
+//
 //    float x = fract(texCoord.x);
 //    float y = fract(texCoord.y);
 //    if (x < lineWidth ||

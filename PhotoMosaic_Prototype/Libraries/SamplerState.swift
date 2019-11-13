@@ -16,6 +16,8 @@ class SamplerStates {
         samplerDescriptor.compareFunction = .less
         samplerDescriptor.minFilter = .linear
         samplerDescriptor.magFilter = .linear
+        samplerDescriptor.mipFilter = .linear
+        samplerDescriptor.lodMinClamp = 0
         return Engine.Device.makeSamplerState(descriptor: samplerDescriptor)!
     }
     

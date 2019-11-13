@@ -13,21 +13,13 @@ class MainView: MTKView {
         
         device = MTLCreateSystemDefaultDevice()
         
-        Engine.Ignite(device!)
-        
         clearColor = MTLClearColor(red: 0, green: 0, blue: 0, alpha: 1.0)
         
         colorPixelFormat = .bgra8Unorm_srgb
         
         depthStencilPixelFormat = .depth32Float_stencil8
         
-        RenderPipelineStates.Initialize()
-        
-        DepthStencilStates.Initialize()
-        
-        SamplerStates.Initialize()
-        
-        Textures.Initialize()
+        Engine.Ignite(device!)
         
         MainView.handler = Handler(self)
         
@@ -37,35 +29,18 @@ class MainView: MTKView {
     @IBAction func btnSearchKeyword(_ sender: NSButton) {
         let value = txtKeyword.stringValue
         sender.isEnabled = false
-     
+
         DispatchQueue.global(qos: .utility).async {
             _ = MainView.handler.getPhotos(keyword: value)
             Settings.FileKeyword = value
             Textures.LoadMosaicLibrary()
             MainView.handler.resetMosaic()
-            
-            DispatchQueue.main.async {
-                sender.isEnabled = true
-            }
-        }
-    }
-    
-    @IBAction func btnUseLibrary(_ sender: NSButton) {
-        let value = txtKeyword.stringValue
-        sender.isEnabled = false
-
-        DispatchQueue.global(qos: .utility).async {
-            Settings.FileKeyword = value
-            Textures.LoadMosaicLibrary()
-            MainView.handler.resetMosaic()
 
             DispatchQueue.main.async {
                 sender.isEnabled = true
             }
         }
     }
-    
-    
 }
 
 

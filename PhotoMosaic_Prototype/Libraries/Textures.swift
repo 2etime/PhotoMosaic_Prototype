@@ -3,13 +3,9 @@ import MetalPerformanceShaders
 
 class Textures {
     private static var _colorLookup: ColorLookup!
-    
     private static var _library: [String: Texture] = [:]
-    
     public static func Initialize() {
-        LoadMosaicLibrary()
-        print(FileManager.default.homeDirectoryForCurrentUser)
-        _library.updateValue(createTextureFromBundle(imageName: "xcO5-QcKIR9o", ext: ".png"), forKey: "MainImage")
+        _library.updateValue(createTextureFromBundle(imageName: "sample_image", ext: ".png"), forKey: "MainImage")
     }
     
     static func SetMainImage(nsImage: NSImage) {
@@ -20,7 +16,7 @@ class Textures {
     
     static func LoadMosaicLibrary() {
         let path = Settings.FileURL(keyword: Settings.FileKeyword)
-        
+
         let fm = FileManager.default
         do {
             let items = try fm.contentsOfDirectory(atPath: path.path)
@@ -28,7 +24,7 @@ class Textures {
             for filename in items {
                 if(filename != ".DS_Store") {
                     let textureData = addTexture(filename: filename, filepath: path.path)
-                    textureDatas.append(textureData)                    
+                    textureDatas.append(textureData)
                 }
             }
             _colorLookup = ColorLookup(textureDatas: textureDatas)
@@ -121,7 +117,7 @@ class Texture {
         let height: Int = bmp.pixelsHigh
         var colorSum = float4(0,0,0,1)
         
-        let colorSampleCount: Int = 300
+        let colorSampleCount: Int = 100
         
         for _ in 0..<colorSampleCount {
             let x: Int = Int.random(in: 0..<width)
@@ -153,7 +149,7 @@ class TextureLoader {
         var result: MTLTexture!
         let textureLoader = MTKTextureLoader(device: Engine.Device)
         do{
-            result = try textureLoader.newTexture(cgImage: cgImage, options: [:])
+            result = try textureLoader.newTexture(cgImage: cgImage, options: [MTKTextureLoader.Option.generateMipmaps: true])
         } catch {
             print(error)
         }

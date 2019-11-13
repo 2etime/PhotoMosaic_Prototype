@@ -23,36 +23,33 @@ class ViewController: NSViewController {
     
     private func loadImageLibraries() {
         photoLibraries = []
-//        let path = try! FileManager.default.url(for: .documentDirectory,
-//                                                   in: .userDomainMask,
-//                                                   appropriateFor: nil,
-//                                                   create: true).appendingPathComponent("mosaic_images")
-//        let fm = FileManager.default
-//        do {
-//            let items = try fm.contentsOfDirectory(atPath: path.path)
-//            for libraryItem in items {
-//                let imagePath = path.appendingPathComponent(libraryItem)
-//                let imageItems = try fm.contentsOfDirectory(atPath: imagePath.path)
-//                
-//                let photoLibrary = PhotoLibrary(libraryName: libraryItem, photoCount: imageItems.count)
-//                photoLibraries.append(photoLibrary)
-//            }
-//        }catch {
-//            print(error)
-//        }
+        let path = Settings.FileURL(keyword: "")
+        let fm = FileManager.default
+        do {
+            let items = try fm.contentsOfDirectory(atPath: path.path)
+            for libraryItem in items {
+                let imagePath = path.appendingPathComponent(libraryItem)
+                let imageItems = try fm.contentsOfDirectory(atPath: imagePath.path)
+
+                let photoLibrary = PhotoLibrary(libraryName: libraryItem, photoCount: imageItems.count)
+                photoLibraries.append(photoLibrary)
+            }
+        }catch {
+            print(error)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tblPhotoLibrary.dataSource = self
-//        tblPhotoLibrary.delegate = self
-//        
-//        let total = String(Settings.CellsHigh * Settings.CellsWide)
-//        lblOutOfCompleted.stringValue = total
-//        
-//        txtCellsWide.stringValue = String(Settings.CellsWide)
-//        txtCellsHigh.stringValue = String(Settings.CellsHigh)
+        tblPhotoLibrary.dataSource = self
+        tblPhotoLibrary.delegate = self
+        
+        let total = String(Settings.CellsHigh * Settings.CellsWide)
+        lblOutOfCompleted.stringValue = total
+        
+        txtCellsWide.stringValue = String(Settings.CellsWide)
+        txtCellsHigh.stringValue = String(Settings.CellsHigh)
     }
     
     @IBAction func btnGenerateMosaic(_ sender: NSButton) {
@@ -96,23 +93,25 @@ class ViewController: NSViewController {
     @IBAction func btnUpdatePhotoLibrary(_ sender: NSButton) {
         let value = txtPhotoLibraryText.stringValue
         sender.isEnabled = false
-        
+
         DispatchQueue.global(qos: .default).async {
             MainView.handler.getPhotos(keyword: value)
-            
+            sleep(2)
             DispatchQueue.main.async {
+                Settings.FileKeyword = value
                 self.loadImageLibraries()
                 self.tblPhotoLibrary.reloadData()
                 sender.isEnabled = true
             }
         }
     }
+    var timer = Timer()
     
     func runProgressBarStartup() {
+        self.timer.invalidate()
         let currentTime = CACurrentMediaTime()
-        btnGenerateMosaic.isEnabled = false
         let val: Double = Double(Settings.CellsWide * Settings.CellsHigh) / 100.0
-        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
             DispatchQueue.global(qos: .default).async {
                 DispatchQueue.main.async(execute: {
                     let total = Settings.TotalNodesCompleted / val
@@ -122,8 +121,7 @@ class ViewController: NSViewController {
                     let newTime = CACurrentMediaTime()
                     self.txtTotalLoadTime.stringValue = String(format: "%g", floor((newTime - currentTime) * 10) / 10) + " secs"
                     if self.mosaicProgressBar.doubleValue >= 100.0 {
-                        self.btnGenerateMosaic.isEnabled = true
-                        timer.invalidate()
+                        self.timer.invalidate()
                     }
                 })
             }

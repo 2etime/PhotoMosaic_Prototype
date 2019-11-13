@@ -1,7 +1,6 @@
 import MetalKit
 
 class Handler: NSObject {
-    
     var scene: MosaicScene!
     var photoLibraryApi = PhotoLibraryApi()
     

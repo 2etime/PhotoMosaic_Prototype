@@ -37,9 +37,9 @@ class PhotoLibraryApi {
                 if let error = error {
                     print("error: \(error)")
                 } else {
-//                    if let response = response as? HTTPURLResponse {
-//                        print("statusCode: \(response.statusCode)")
-//                    }
+                    if let response = response as? HTTPURLResponse {
+                        print("statusCode: \(response.statusCode)")
+                    }
                     if let data = data {
                         do {
                             let responseData = String(data: data, encoding: .utf8)

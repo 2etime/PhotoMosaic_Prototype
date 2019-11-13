@@ -2,12 +2,13 @@ import MetalKit
 
 class MosaicScene: Scene {
     var mosaic: Mosaic!
+    private var _useAverage: Bool = false
     override func buildScene() {
 
     }
     
     func useAverage(isOn: Bool) {
-        self.mosaic.useAverage = isOn
+        self._useAverage = isOn
     }
 
     func updateMosaic() {
@@ -22,6 +23,7 @@ class MosaicScene: Scene {
         }else{
             mosaic.createMosaicGroup(cellsWide: Settings.CellsWide, cellsHigh: Settings.CellsHigh)
         }
+        mosaic.useAverage = _useAverage
     }
     
     override func doUpdate() {
