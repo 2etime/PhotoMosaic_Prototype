@@ -14,7 +14,6 @@ class Settings {
     
     static func FileURL(keyword: String)->URL {
         let fileURL = URL(fileURLWithPath: PATH_TO_MOSAIC_IMAGES).appendingPathComponent(keyword)
-        print("RIGHT HERE::::::" + fileURL.path)
         return fileURL
     }
 }
